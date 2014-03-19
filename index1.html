@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+	<script src="lib/ckeditor/ckeditor.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+  </head>
+  <body>
+    <div id="write" ng-app="ck">
+      <div ck-editor ng-model="value">dasfsdjh asdkjfhasl fds asjdfhlk</textarea>
+	</div>
+    <script type="text/javascript">
+    	angular.module('ck', []).directive('ckEditor', function() {
+		  return {
+			require: '?ngModel',
+			link: function(scope, elm, attr, ngModel) {
+			  var ck = CKEDITOR.replace(elm[0]);
+
+			  if (!ngModel) return;
+
+			  ck.on('pasteState', function() {
+				scope.$apply(function() {
+				  ngModel.$setViewValue(ck.getData());
+				});
+			  });
+
+			  ngModel.$render = function(value) {
+				ck.setData(ngModel.$viewValue);
+			  };
+			}
+		  };
+		});
+    </script>
+  </body>
+</html>

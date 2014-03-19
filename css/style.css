@@ -1,0 +1,16 @@
+body{
+	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	letter-spacing: -0.02em;
+	font-weight: 400;
+	font-style: normal;
+	color: #333332;
+	font-size: 18px;
+	line-height: 1.4;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased
+}
+#readBook{
+	display: block;
+	height: 800px;
+	overflow: scroll;
+}
