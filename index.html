@@ -1,20 +1,11 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <script src="lib/angular.min.js"></script>
-	<script src="lib/medium-editor/js/medium-editor.min.js"></script>
+    <script src="lib/angular-touch.js"></script>
+	<script src="lib/medium-editor/js/medium-editor.js"></script>
 	<script src="lib/angular-medium-editor.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="lib/medium-editor/css/medium-editor.css">
-	<link rel="stylesheet" type="text/css" href="lib/medium-editor/css//themes/default.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-  </head>
-  <body>
-    <div id="write" ng-app="demo">
-		<div ng-controller="demo">
-      <div medium-editor ng-model="text"></div>
-	  </div>
-	</div>
 	<script>
 		'use strict';
 
@@ -22,10 +13,26 @@
 
 		.controller('demo', ['$scope', function($scope) {
 
-		  $scope.text =
-		  "<p>The Hon. Francis Gillette, in a speech in Hartford, Conn., in 1871, said that there was in Connecticut, on an average, one liquor shop to every forty voters, and three to every Christian church.</p><p> In this city, as stated in the _Hartford Times_, recently, we have five hundred liquor shops, and one million eight hundred and twenty-five thousand dollars were, last year, paid for intoxicating drinks. A cry, an appeal, came to me from the city, a few days since, after this wise: Our young men are going to destruction, and we want your influence, counsel, and prayers, to help save them.In New London, report says, the young men are falling into drinking habits as never before. So in New Haven, Bridgeport, and the other cities and large places of the state.</p>";
+		
+		 $scope.text = "<h1>NẾU KHÔNG PHẢI LÀ ANH</h1><div id='page1' class='page'><h2>VỢ THUÊ</h2><p>Nhi run rẩy chạy dọc theo hành lang trắng xóa của bệnh viện đa khoa đặc mùi thuốc khử trùng. Tin xấu từ người dì họ dưới quê nhà luôn ám ảnh trong đầu cô suốt quãng đường từ Sài Gòn về. Thế nên mặc dù cô luôn tự trấn an rằng em trai mình sẽ không gặp vấn đề gì nghiêm trọng, nhưng linh tính mách bảo khiến những bước chân của Nhi không thể nào vững chãi nữa.</p><p>\"Bác sỹ, em trai của tôi sao rồi ạ?\"</p><p>Bác sỹ vỗ vỗ vai Nhi trấn tĩnh và an ủi khi nhìn thấy cô đứng sững sờ trong làn nước mắt. Vài chục triệu à? Hai năm qua học ở Sài Gòn, đến hai triệu đồng cô còn chưa có. Tiền nhà trọ, tiền học phí, lại thêm việc mỗi tháng cô đều phải gửi tiền về quê cho người dì họ chăm sóc đứa em trai khờ khạo, số tiền làm thêm và dành dụm cô cũng chỉ xoay sở được những phần chi phí sinh hoạt khác.</p></div><div id='page2' class='page'><h2>\"NGỌC TRONG ĐÁ\"</h2><p>Ngày thứ nhất làm vợ.</p><p>Cũng không quá khó khăn hay tồi tệ so với những gì Gia Nhi đã từng trải qua trong thời gian cô trưởng thành không cha không mẹ. Nhớ lại buổi tối hôm qua, Cao Nguyên nhìn thấy dáng vóc ngồi co ro trên đầu giường của cô, anh không nói lời nào, chỉ tặng cho cô một nụ cười miệt thị rồi lẳng lặng ôm cả gối và chăn định chuyển sang phòng khác. Nhưng Gia Nhi đã lên tiếng trước.</p><p>\"Nếu anh cho phép, tôi có thể qua phòng của bé Dương…\"</p><p>\"Bé Dương đã có má Lam. Cô cứ ở đây, nhà tôi nhiều phòng, cô không cần lo.\"</p><p>\"Thật sự thì tôi không quen nằm trên một chiếc giường rộng rãi như thế này. Vả lại, anh đã thuê tôi là mẹ bé Dương, tôi cũng muốn làm tròn trách nhiệm. Tôi sẽ cùng má Lam chăm sóc con anh.\"</p><p>Tối đó, Gia Nhi trằn trọc suốt đêm. Cô không ngủ được vì lo cho những ngày sắp đến, không biết bản thân mình sẽ đi đến bước đường nào nữa. Cô sực nhớ đến Huy, suy nghĩ đến ngày vào trường gặp lại anh, cô phải đối mặt như thế nào. Bất chợt có giọt nước mắt nóng hổi lăn trên má cô.</p><p>Buổi sáng thứ bảy, trời trong xanh, không khí trong lành khiến tâm trạng mọi người cũng thoải mái. Má Lam hì hục chuẩn bị hai phần bò bít tết thật nóng hổi cho bữa điểm tâm. Trong khi đó, Gia Nhi vẫn nằm cuộn tròn trong chăn cho đến khi chiếc điện thoại rung bần bật, nhìn con số tám hiện lên trên màn hình, cô mới bật dậy chui ngay khỏi chăn, trong đầu suy nghĩ lần này chắc chắn sẽ bị người “chồng” kia hằn học thôi. Trước khi ra khỏi phòng, Gia Nhi vẫn không quên liếc nhìn Nguyên Dương, mỉm cười.</p></div>";
 
 		}]);
 	</script>
+	<link rel="stylesheet" type="text/css" href="lib/medium-editor/css/medium-editor.css">
+	<link rel="stylesheet" type="text/css" href="lib/medium-editor/css//themes/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/article.css">
+  </head>
+  <body>
+    <div id="container">
+    <div id="write" ng-app="demo">
+		<div ng-controller="demo">
+		<form name="demo">
+      <div medium-editor ng-model="text"></div>
+	  </form>
+	  </div>
+	</div>
+</div>
   </body>
 </html>
