@@ -4,9 +4,49 @@ h1,h2,p,a,blockquote{
 	color: #000;
 }
 
-h1{
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+}
+
+#write_article h1,#write_article h2{
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+#article_title::-webkit-input-placeholder { font-style: italic; }
+#article_title::-moz-input-placeholder { font-style: italic; } /* firefox 19+ */
+#article_title:-ms-placeholder { font-style: italic; } /* ie */
+
+#article_subtitle{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: -0.04em;
+	font-size: 30px;
+	line-height: 1.1;
+	padding-top: 3px;
+	margin-bottom:12px;
+	color: gray;
+}
+#article_title{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
+	font-style: normal;
+	letter-spacing: -0.04em;
+	font-size: 50px;
+	line-height: 1.1;
+	padding-top: 31px;
+	margin-bottom:4px;
+	text-transform: uppercase;
+}
+#article_content{
+	margin-top: 30px;
+}
+
+#article_content h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 	font-style: normal;
 	letter-spacing: -0.04em;
 	font-size: 50px;
@@ -15,10 +55,10 @@ h1{
 	margin-bottom:12px;
 }
 
-h2{
+#article_content h2{
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: -0.02em;
-	font-weight: 600;
+	font-weight: 400;
 	font-style: normal;
 	font-size: 32px;
 	line-height: 1.2;
@@ -26,7 +66,8 @@ h2{
 	margin-bottom: 2px;
 }
 
-p{
+#article_content p{
+	font-family: serif;
 	letter-spacing: .01rem;
 	font-weight: 300;
 	font-style: normal;
@@ -36,12 +77,14 @@ p{
 	padding: 8px 0px;
 }
 
-a{
+#article_content a{
+	font-family: serif;
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-blockquote {
+#article_content blockquote {
+	font-family: serif;
 	font-size: 22px;
 	letter-spacing: .01rem;
 	font-weight: 300;
@@ -53,4 +96,13 @@ blockquote {
 	padding-top: 4px;
 	margin-top : 6px;
 	margin-bottom: 6px;
+}
+
+#article_content.medium-editor-placeholder{
+	font-size: 22px;
+	line-height: 1.5;
+}
+
+#article_title.medium-editor-placeholder{
+	font-size: 32px;
 }
