@@ -107,14 +107,14 @@ body{
 	z-index: 1000;
 }
 
-.box_controll {
+.box_control {
 	left: 10px;
 	top: 10px;
 	text-indent: -9000px;
 	cursor: pointer;
 }
 
-.box_controll{
+.box_control{
 	position: absolute;
 	width: 44px;
 	height: 44px;
@@ -125,9 +125,22 @@ body{
 	speak: none;
 	font-weight: bold;
 	cursor: pointer;
+	opacity: 1;
+	visibility:visible;
+	transition-delay:1s;
+    -webkit-transition: visibility 0.1s linear, opacity 0.5s linear;
+    -moz-transition: visibility 0.1s linear, opacity 0.5s linear;
+    -o-transition: visibility 0.1s linear, opacity 0.5s linear;
+    -ms-transition: visibility 0.1s linear, opacity 0.5s linear;
+    transition: visibility 0.1s linear, opacity 0.5s linear;
 }
 
-.box_controll:after {
+.box_control_disable{
+	opacity: 0;
+	visibility:hidden;
+}
+
+.box_control:after {
 	position: absolute;
 	content: '';
 	width: 50%;
