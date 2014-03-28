@@ -11,6 +11,7 @@
 	<script src="lib/angular-medium-editor.min.js"></script>
 	<script>
 		'use strict';
+		var domain = "http://192.168.78.140:3000";
 		angular.module('configContenteditable', []).
 		  directive('contenteditable', function () {
 		      return {
@@ -74,7 +75,7 @@
 		 		};
 		 		console.log(data);
 
-		 		$http.post('http://localhost:3000/article/save', data).
+		 		$http.post(domain + '/article/save', data).
 				    success(function(data, status, headers, config) {
 				      console.log('success', data);
 				    }).
